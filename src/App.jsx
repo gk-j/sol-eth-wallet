@@ -2,12 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import SeedPhraseInput from './Components/existingWallet'
+
 import { createBrowserRouter,Outlet,RouterProvider } from "react-router-dom";
 import  Home  from './Components/Home'
+import CreateWallet from './Components/CreateWallet'
+import SeedPhraseInput from './Components/existingWallet';
+
 function App() {
-  const [newAccount ,setNewAccount] = useState(true)
-  const [oldAccount,setOldAccount] = useState(true)
   return (
     <>
       <div>
@@ -24,7 +25,11 @@ const appRouter = createBrowserRouter([
   },
   {
     path: '/import',
-    element: <SeedPhraseInput />,
+    element: <SeedPhraseInput/>,
+  },
+  {
+    path: '/new-wallet',
+    element: <CreateWallet/>,
   },
 ]);
 
