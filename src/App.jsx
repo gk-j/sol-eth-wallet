@@ -6,7 +6,7 @@ import './App.css'
 import { createBrowserRouter,Outlet,RouterProvider } from "react-router-dom";
 import  Home  from './Components/Home'
 import CreateWallet from './Components/CreateWallet'
-import SeedPhraseInput from './Components/existingWallet';
+import SeedPhraseInput from './Components/ImportWallet';
 
 function App() {
   return (
